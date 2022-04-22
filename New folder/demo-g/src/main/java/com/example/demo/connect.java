@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,8 @@ public class connect {
 	}
 	private String name;
 	private int doorno;
+	@Autowired
+	private Internet moderm;
 	
 	public String getName() {
 		return name;
@@ -25,6 +28,7 @@ public class connect {
 		this.doorno = doorno;
 	}
 	public void connectt(){
+		moderm.connection();
 		System.out.println("Connected Successfully");
 	}
 	
